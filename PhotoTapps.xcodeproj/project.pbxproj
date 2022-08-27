@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		868C4AD528BA28CC00605537 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C4AD428BA28CC00605537 /* PhotoCollectionViewCell.swift */; };
 		86DDC4D828BA2589009BD1FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DDC4D728BA2589009BD1FC /* AppDelegate.swift */; };
 		86DDC4DA28BA2589009BD1FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DDC4D928BA2589009BD1FC /* SceneDelegate.swift */; };
-		86DDC4DC28BA2589009BD1FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DDC4DB28BA2589009BD1FC /* ViewController.swift */; };
 		86DDC4DF28BA2589009BD1FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86DDC4DD28BA2589009BD1FC /* Main.storyboard */; };
 		86DDC4E128BA258A009BD1FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DDC4E028BA258A009BD1FC /* Assets.xcassets */; };
 		86DDC4E428BA258A009BD1FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86DDC4E228BA258A009BD1FC /* LaunchScreen.storyboard */; };
+		86DDC4EC28BA2606009BD1FC /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DDC4EB28BA2606009BD1FC /* PhotosCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		868C4AD428BA28CC00605537 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		86DDC4D428BA2589009BD1FC /* PhotoTapps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoTapps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86DDC4D728BA2589009BD1FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86DDC4D928BA2589009BD1FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		86DDC4DB28BA2589009BD1FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		86DDC4DE28BA2589009BD1FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86DDC4E028BA258A009BD1FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86DDC4E328BA258A009BD1FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86DDC4E528BA258A009BD1FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86DDC4EB28BA2606009BD1FC /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				86DDC4D728BA2589009BD1FC /* AppDelegate.swift */,
 				86DDC4D928BA2589009BD1FC /* SceneDelegate.swift */,
-				86DDC4DB28BA2589009BD1FC /* ViewController.swift */,
 				86DDC4DD28BA2589009BD1FC /* Main.storyboard */,
+				868C4AD428BA28CC00605537 /* PhotoCollectionViewCell.swift */,
+				86DDC4EB28BA2606009BD1FC /* PhotosCollectionViewController.swift */,
 				86DDC4E028BA258A009BD1FC /* Assets.xcassets */,
 				86DDC4E228BA258A009BD1FC /* LaunchScreen.storyboard */,
 				86DDC4E528BA258A009BD1FC /* Info.plist */,
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86DDC4DC28BA2589009BD1FC /* ViewController.swift in Sources */,
 				86DDC4D828BA2589009BD1FC /* AppDelegate.swift in Sources */,
+				868C4AD528BA28CC00605537 /* PhotoCollectionViewCell.swift in Sources */,
 				86DDC4DA28BA2589009BD1FC /* SceneDelegate.swift in Sources */,
+				86DDC4EC28BA2606009BD1FC /* PhotosCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +297,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,7 +309,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,6 +326,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,7 +338,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

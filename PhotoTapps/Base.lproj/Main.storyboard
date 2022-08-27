@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -43,6 +44,7 @@
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="dogImageView" destination="jTH-IU-dA9" id="ogk-WC-C0q"/>
+                                    <segue destination="JMS-9v-VG5" kind="presentation" identifier="pickPhotoSegue" id="e67-Gf-z87"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -56,6 +58,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jtr-Tt-WQ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="718.84057971014499" y="78.348214285714278"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="twm-Po-aOt">
+            <objects>
+                <viewController id="JMS-9v-VG5" customClass="PhotoViewController" customModule="PhotoTapps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mfU-gK-Yjb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Zk-Ms-utY">
+                                <rect key="frame" x="0.0" y="261" width="414" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="Uvh-VD-Z7V"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inL-k7-GeV">
+                                <rect key="frame" x="141.5" y="774" width="131" height="32"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Tap to Share">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="shareAction:" destination="JMS-9v-VG5" eventType="touchUpInside" id="dls-rJ-AdY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MQs-Wk-iha"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="3Zk-Ms-utY" firstAttribute="leading" secondItem="MQs-Wk-iha" secondAttribute="leading" id="gDb-zv-NH0"/>
+                            <constraint firstItem="MQs-Wk-iha" firstAttribute="trailing" secondItem="3Zk-Ms-utY" secondAttribute="trailing" id="ihO-lF-Mqh"/>
+                            <constraint firstItem="inL-k7-GeV" firstAttribute="centerX" secondItem="mfU-gK-Yjb" secondAttribute="centerX" id="kSd-Fw-NlT"/>
+                            <constraint firstItem="3Zk-Ms-utY" firstAttribute="centerY" secondItem="mfU-gK-Yjb" secondAttribute="centerY" id="qWd-Sf-CnZ"/>
+                            <constraint firstItem="MQs-Wk-iha" firstAttribute="bottom" secondItem="inL-k7-GeV" secondAttribute="bottom" constant="36" id="yZ8-vZ-bJc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="3Zk-Ms-utY" id="yeU-ER-xje"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIH-27-f7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1485.5072463768117" y="77.678571428571431"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fdl-9W-5G8">
@@ -77,6 +129,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
